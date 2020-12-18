@@ -7,51 +7,56 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 </head>
 <body>
-    <nav class="navbar navbar-light  bg-light">
-    <a class="navbar-brand p-2 ml-3  text-muted" href="#">
-    <i class="fab fa-instagram fa-lg "></i>Instagram</a>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label"></label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                                <p class="mb-10"></p>
-                                <a class="btn btn-sm px-1 btn-outline-dark" href="#" role="button"><img src="https://image.flaticon.com/icons/png/512/3/3901.png" height="20" width="20" alt="camera vector"></a>
-                                <a class="btn btn-sm px-1 btn-outline-dark" href="#" role="button"><img src="https://image.flaticon.com/icons/png/512/3/3901.png" height="20" width="20" alt="location vector"></a>
-                        </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-dark font-weight-normal" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success font-weight-normal">Publish</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="img-responsive" width="15" height="15" src="https://image.flaticon.com/icons/png/512/40/40031.png"></img>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Log out</a>
-                </div>
-            </li>
-            </ul>
-        </div>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create a new post</button>
-    </nav>
+	<div class="containter-fluid">
+		<div class="row d-flex justify-content-center ">
+			<div class="col-12 ">
+				<nav class="navbar navbar-light  bg-light">
+					<a class="navbar-brand p-1 ml-3 text-muted" href="#">
+						<i class="fab fa-instagram fa-lg "></i>Instagram</a>
+					<div class="nav-item pr-4 d-flex justify-content-end">
+						<button type="button" class="btn btn-info btn-lg bg-success" data-toggle="modal" data-target="#myModal">Create a new post</button>
+						<div id="myModal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+
+								<!-- Modal content-->
+								<div class="modal-content">
+
+									<div class="modal-body border border-dark rounded m-3">
+										<p>
+											<placeholder></placeholder>
+										</p>
+									</div>
+
+									<div class="modal-icons">
+										<i class="fas fa-camera border border-secondary rounded p-1 ml-2"></i>
+										<i class="fas fa-map-marker-alt border border-secondary rounded-lg p-1 "></i>
+									</div>
+
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default border border-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-default text-white bg-success" data-dismiss="modal">Publish</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item dropdown ">
+							<a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-cog"></i>
+							</a>
+							<div class="dropdown-menu " aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Log Out</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+			</div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="card-group" style="width: 50rem">
